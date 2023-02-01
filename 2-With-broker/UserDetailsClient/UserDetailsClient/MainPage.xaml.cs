@@ -10,14 +10,14 @@ using Xamarin.Forms;
 namespace UserDetailsClient
 {
     public partial class MainPage : ContentPage
-    {        
+    {
         public MainPage()
         {
             InitializeComponent();
         }
 
         private void OnSignInSignOut(object sender, EventArgs e)
-        {            
+        {
             CreatePublicClient(false);
             AcquireTokenAsync().ConfigureAwait(false);
         }
@@ -101,7 +101,7 @@ namespace UserDetailsClient
         }
 
         private void btnSignInSignOutWithBroker_Clicked(object sender, EventArgs e)
-        {            
+        {
             CreatePublicClient(true);
 
             AcquireTokenAsync().ConfigureAwait(false);
@@ -120,7 +120,7 @@ namespace UserDetailsClient
                         IAccount firstAccount = accounts.FirstOrDefault();
 
                         // On UWP, you can set firstAccount = PublicClientApplication.OperatingSystemAccount if you
-                        // want to sign-in THE account signed-in with Windows 
+                        // want to sign-in THE account signed-in with Windows
                         authResult = await App.PCA.AcquireTokenSilent(App.Scopes, firstAccount)
                                               .ExecuteAsync();
                     }
@@ -129,6 +129,7 @@ namespace UserDetailsClient
                         try
                         {
                             authResult = await App.PCA.AcquireTokenInteractive(App.Scopes)
+                                                      .WithAuthority("https://login.microsoftonline.com/e0fc8045-dafa-4bcc-96af-9d5e872b7d60")
                                                       .WithParentActivityOrWindow(App.ParentWindow)
                                                       .WithUseEmbeddedWebView(true)
                                                       .ExecuteAsync();

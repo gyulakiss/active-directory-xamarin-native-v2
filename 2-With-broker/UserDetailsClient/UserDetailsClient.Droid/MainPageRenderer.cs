@@ -30,7 +30,7 @@ namespace UserDetailsClient.Droid
         {
             base.OnElementChanged(e);
             page = e.NewElement as MainPage;
-            var activity = this.Context as Activity;           
+            var activity = this.Context as Activity;
         }
 
     }

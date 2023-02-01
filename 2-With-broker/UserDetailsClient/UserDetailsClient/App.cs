@@ -8,13 +8,14 @@ namespace UserDetailsClient
         public static IPublicClientApplication PCA = null;
 
         /// <summary>
-        /// The ClientID is the Application ID found in the portal (https://go.microsoft.com/fwlink/?linkid=2083908). 
+        /// The ClientID is the Application ID found in the portal (https://go.microsoft.com/fwlink/?linkid=2083908).
         /// You can use the below id however if you create an app of your own you should replace the value here.
         /// </summary>
-        public static string ClientID = "4a1aa1d5-c567-49d0-ad0b-cd957a47f842"; // ms-identity-samples-testing
+        //public static string ClientID = "4a1aa1d5-c567-49d0-ad0b-cd957a47f842"; // ms-identity-samples-testing
+        public static string ClientID = "f899ce88-2ef8-4830-8052-fa7f72a49e07"; // ms-identity-samples-testing
         public const string BrokerRedirectUriOnIos = "msauth.com.yourcompany.UserDetailsClient://auth";
 
-        //The redirect uri on Android will need to be created based on the signature of the .APK used to sign it. 
+        //The redirect uri on Android will need to be created based on the signature of the .APK used to sign it.
         //This means that it will be different depending on where this sample is run because Visual Studio creates
         //a unique signing key for debugging purposes on every machine. You can figure out what that signature will be by running the following commands
         //- For Windows: `keytool -exportcert -alias androiddebugkey -keystore %HOMEPATH%\.android\debug.keystore | openssl sha1 -binary | openssl base64`
