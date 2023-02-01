@@ -9,10 +9,11 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.NETCore.Platforms" Version="7.0.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="System.Reflection.TypeExtensions" Version="4.7.0" />
 
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1560" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2545" />
     <PackageReference Include="Microsoft.Identity.Client" Version="4.49.1" />
   </ItemGroup>
 
